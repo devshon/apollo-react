@@ -1,0 +1,57 @@
+.MoviePoster {
+  margin: 50px 0px;
+}
+.MoviePosterShadow {
+  transition: 0.5s;
+  border-radius: 5px;
+
+  /* -------- */
+  /* box-shadow: 0px 0px 30px red; */
+}
+.MoviePoster:hover .MoviePosterShadow {
+  box-shadow: 0px 0px 80px rgb(255, 0, 0);
+}
+.MoviePosterImg {
+  transition: 0.5s;
+  width: 230px;
+  height: 375px;
+  border-radius: 5px;
+
+  /* -------- */
+  /* width: 300px;
+  height: 480px; */
+}
+.MoviePoster:hover .MoviePosterImg {
+  width: 300px;
+  height: 480px;
+  margin-top: 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+.MovieHoverSider {
+  background-color: #000;
+  height: 0px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 5px 5px;
+  transition: 0.5s;
+  margin-top: -5px;
+
+  /* ---------- */
+  /* height: 140px;
+  width: 300px; */
+}
+.MoviePoster:hover .MovieHoverSider {
+  height: 120px;
+  width: 300px;
+}
+.MovieHoverSider > span {
+  color: #fff;
+  display: none;
+
+  /* ---------- */
+  /* display: flex; */
+}
+.MoviePoster:hover .MovieHoverSider > span {
+  display: flex;
+}

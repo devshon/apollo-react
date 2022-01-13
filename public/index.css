@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+#root {
+  padding: 50px;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+span {
+  font-family: system-ui;
+  color: #fff;
+}
+svg {
+  cursor: pointer;
+}
