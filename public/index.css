@@ -1,13 +1,14 @@
+@import "~antd/dist/antd.css";
+
 html {
   height: 100%;
 }
 body {
   height: 100%;
-  width: 100%;
   background-color: #000;
 }
 #root {
-  padding: 50px;
+  height: 100%;
 }
 a:-webkit-any-link {
   text-decoration: none;
@@ -18,4 +19,7 @@ span {
 }
 svg {
   cursor: pointer;
+}
+.ant-layout {
+  padding: 50px;
 }

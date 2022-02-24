@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/react-hooks";
 import { useParams } from "react-router-dom";
 
 const GET_MOVIE = gql`
-  query getById($id: Int!) {
+  query getById($id: String!) {
     movie(id: $id) {
       id
       title
@@ -19,13 +19,27 @@ const GET_MOVIE = gql`
 
 function Detail() {
   const { id } = useParams();
-  const { loading, data } = useQuery(GET_MOVIE, { variables: { id: id } });
+  const { loading, data, error } = useQuery(GET_MOVIE, {
+    variables: { id: id },
+  });
 
-  console.log("Detail >>> ", loading, data, id);
+  const movie = data?.movie;
+
   return (
-    <div>
-      <span>{id}</span>
-    </div>
+    <>
+      {loading && <div></div>}
+      {!loading && data && (
+        <div>
+          <span>{movie.title}</span>
+          <span>{movie.description_intro}</span>
+          <span>{movie.language}</span>
+          <span>{movie.genres}</span>
+          <span>{movie.rating}</span>
+          <img alt={movie.title} src={movie.medium_cover_image} />
+        </div>
+      )}
+      {error && <div>error 404</div>}
+    </>
   );
 }
 

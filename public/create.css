@@ -1,0 +1,17 @@
+.create_createbutton {
+  background: #ff3737;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+.create_createbutton:hover {
+  background: #fd6161;
+}
+.create_empty_box {
+  padding: 5px;
+  box-shadow: 0px 0px 25px rgb(255 0 0);
+  margin: 20px 0px;
+}
